@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Website 2</title>
+  <link rel="stylesheet"href="style.css">
+  <script src="https://kit.fontawesome.com/76edf1e5d3.js" crossorigin="anonymous"></script>
+    <script defer src="main.js"></script> 
+</head>
+
+<body>
+  
+  <div class="nav-bar">
+    <ul>
+      <li value="0"><i class="fas fa-house"></i></li>
+      <li value="1" ><i class="fas fa-heart"></i></li>
+      <li value="2"><i class="fas fa-plus"></i></li>
+      <li value="3"><i class="fas fa-user"></i></li>
+     <li value="4"><i class="fas fa-gear"></i></li>
+     <div id="circle"><i class="fas fa-plus"></i></div>
+    </ul>
+  </div>
+  
+  
+  
+  <script>
+    
+    let links = document.getElementsByTagName("li")
+    let circle = document.getElementById("circle")
+    
+    for(link of links){
+      link.onclick = function(){
+        
+        for(link of links){
+          link.style.opacity = 1;
+        }
+        
+        circle.style.left = (80* this.value) + "px";
+        circle.innerHTML = this.innerHTML;
+        this.style.opacity = 0;
+       
+      }
+    }
+    
+  </script>
+  
+</body>
+</html>
